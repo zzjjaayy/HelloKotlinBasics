@@ -49,7 +49,7 @@ fun main() {
     when (dad1) {
         null -> print("Value is null")
         "jay" -> print("Value is $dad1")
-        // "$dad1" is used to display the value of the variable dad1
+        // "$dad1" is used to display the value of the variable dad1 {Known as String Template}
         //it is used as an substitute to String concatenation when only values are to displayed
 
         else -> println()// similar to default case in switch statements in JAVA
@@ -61,6 +61,52 @@ fun main() {
         else -> "HEHE" //default case
     }
 
+    // INVOKING THE getGreeting FUNCTION
+    println(getGreeting())
 
+    // INVOKING THE getGreeting2 FUNCTION
+    println(getGreeting2())
 
+    // INVOKING THE sayHello FUNCTION
+    println(sayHello("jay")) // accepts one parameter
+
+    // INVOKING THE greeting FUNCTION
+    println(greeting("Hello", "jay")) // accepts two parameters
+}
+
+/**
+ * FUNCTIONS
+ * NOTE : the functions those are not associated with any class are known as Top-Level Functions
+ */
+
+//EXAMPLE 1
+fun getGreeting() : String {
+    //this is how a basic function looks like
+    // fun keyword shows that it is a new function
+    // getGreeting is the name of the function
+    // String is the return type
+    //{By default the return type is "Unit" which basically means returns nothing useful}
+
+    return "anything" // returns the value
+}
+
+// EXAMPLE 2
+fun getGreeting2() = "anything"
+//Alternative method to declare a function
+// generally used for short function declarations
+// the function returns a String "anything"
+
+//EXAMPLE 3
+fun sayHello(name:String) {
+    print("Hello $name")
+
+    //"name" is the name of the parameter
+    //String is the data type of the parameter
+}
+
+//EXAMPLE 4
+fun greeting(greet:String, name:String) {
+    print("$greet $name")
+
+    //takes in two parameters
 }
